@@ -5,16 +5,16 @@
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "0",
+    "hash" : "2579850737",
     "id" : "ECF96037",
-    "lastKnownWriteTime" : 1556401168,
-    "last_content_update" : 1556401168702,
+    "lastKnownWriteTime" : 1556405740,
+    "last_content_update" : 1556405740448,
     "path" : "/run/media/cbrunos/0a8a239e-7f3e-4756-9ddd-129c23fad79b/laragreen/Documents/diffindiff/data-raw/DATASET.R",
     "project_path" : "data-raw/DATASET.R",
     "properties" : {
-        "cursorPosition" : "56,6",
+        "cursorPosition" : "83,0",
         "marks" : "<:0,0\n>:0,0",
-        "scrollLine" : "56"
+        "scrollLine" : "51"
     },
     "read_only" : false,
     "read_only_alternatives" : [

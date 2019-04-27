@@ -79,4 +79,6 @@ dataset <- bind_rows(dataset1, dataset2) %>%
 #     labs(title = "Distribution of starting wage rates in fast food restaurants",
 #          caption = "On April 1st, 1992, New Jersey's minimum wage rose from $4.25 to $5.05. Source: Card and Krueger (1994)")
 
+eitc <- read_table2("http://www.montana.edu/cstoddard/562/oldkeys/eitc.out")
+
 usethis::use_data("DATASET")
