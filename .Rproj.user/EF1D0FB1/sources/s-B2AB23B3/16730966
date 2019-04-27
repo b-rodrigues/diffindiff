@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1556373624451.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1315305120",
+    "id" : "16730966",
+    "lastKnownWriteTime" : 1556376322,
+    "last_content_update" : 1556376322264,
+    "path" : "/run/media/cbrunos/0a8a239e-7f3e-4756-9ddd-129c23fad79b/laragreen/Documents/diffindiff/R/hello.R",
+    "project_path" : "R/hello.R",
+    "properties" : {
+        "cursorPosition" : "3,0",
+        "scrollLine" : "0"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

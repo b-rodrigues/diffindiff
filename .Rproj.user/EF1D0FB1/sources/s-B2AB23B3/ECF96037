@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1556376391076.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1430353819",
+    "id" : "ECF96037",
+    "lastKnownWriteTime" : 1556376705,
+    "last_content_update" : 1556376705847,
+    "path" : "/run/media/cbrunos/0a8a239e-7f3e-4756-9ddd-129c23fad79b/laragreen/Documents/diffindiff/data-raw/DATASET.R",
+    "project_path" : "data-raw/DATASET.R",
+    "properties" : {
+        "cursorPosition" : "2,28",
+        "scrollLine" : "0"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
