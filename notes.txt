@@ -17,7 +17,6 @@ hello <- function() {
   print("Hello, world!")
 }
 
-usethis::use_roxygen_md()
 
 > usethis::use_roxygen_md()
 ✔ Setting Roxygen field in DESCRIPTION to 'list(markdown = TRUE)'
@@ -68,3 +67,12 @@ ok we can start working on the code itself
 
 > usethis::use_data(njmin, overwrite = TRUE)
 ✔ Saving 'njmin' to 'data/njmin.rda'
+
+> usethis::use_readme_md()
+✔ Setting active project to '/run/media/cbrunos/0a8a239e-7f3e-4756-9ddd-129c23fad79b/laragreen/Documents/diffindiff'
+✔ Writing 'README.md'
+● Modify 'README.md'
+
+document the file, then run devtools::document() 
+
+
