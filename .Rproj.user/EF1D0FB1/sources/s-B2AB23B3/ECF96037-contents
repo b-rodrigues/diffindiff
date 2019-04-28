@@ -40,26 +40,45 @@ dataset <- dataset %>%
               shore == 1 ~ "shorej",
               pa1 == 1 ~ "pa1",
               pa2 == 1 ~ "pa2")) %>%
+    mutate(meals = case_when(meals == 0 ~ "None",
+                             meals == 1 ~ "Free meals",
+                             meals == 2 ~ "Reduced price meals",
+                             meals == 3 ~ "Both free and reduced price meals")) %>%
+    mutate(meals2 = case_when(meals2 == 0 ~ "None",
+                             meals2 == 1 ~ "Free meals",
+                             meals2 == 2 ~ "Reduced price meals",
+                             meals2 == 3 ~ "Both free and reduced price meals")) %>%
+    mutate(status2 = case_when(status2 == 0 ~ "Refused 2nd interview",
+                               status2 == 1 ~ "Answered 2nd interview",
+                               status2 == 2 ~ "Closed for renovations",
+                               status2 == 3 ~ "Closed permanently",
+                               status2 == 4 ~ "Closed for highway construction",
+                               status2 == 5 ~ "Closed due to Mall fire")) %>%
+    mutate(co_owned = if_else(co_owned == 1, "Yes", "No")) %>%
+    mutate(bonus = if_else(bonus == 1, "Yes", "No")) %>%
+    mutate(special2 = if_else(special2 == 1, "Yes", "No")) %>%
+    mutate(type2 = if_else(type2 == 1, "Phone", "Personal")) %>%
     select(sheet, chain, co_owned, state, region, everything()) %>%
     select(-southj, -centralj, -northj, -shore, -pa1, -pa2) %>%
     mutate(date2 = lubridate::mdy(date2)) %>%
-    rename(open2 = open2r)
+    rename(open2 = open2r) %>%
+    rename(firstinc2 = firstin2)
 
 
 
 dataset1 <- dataset %>%
-    select(-ends_with("2"), -sheet, -chain, -co_owned, -state, -region) %>%
-    mutate(type = NA_real_,
-           status = NA_real_,
+    select(-ends_with("2"), -sheet, -chain, -co_owned, -state, -region, -bonus) %>%
+    mutate(type = NA_character_,
+           status = NA_character_,
            date = NA)
 
 dataset2 <- dataset %>%
     select(ends_with("2")) %>%
-    mutate(bonus = NA_real_) %>%
+    #mutate(bonus = NA_character_) %>%
     rename_all(~str_remove(., "2"))
 
 other_cols <- dataset %>%
-    select(sheet, chain, co_owned, state, region)
+    select(sheet, chain, co_owned, state, region, bonus)
 
 other_cols_1 <- other_cols %>%
     mutate(observation = "February 1992")
@@ -70,7 +89,7 @@ other_cols_2 <- other_cols %>%
 dataset1 <- bind_cols(other_cols_1, dataset1)
 dataset2 <- bind_cols(other_cols_2, dataset2)
 
-dataset <- bind_rows(dataset1, dataset2) %>%
+njmin <- bind_rows(dataset1, dataset2) %>%
     select(sheet, chain, state, region, observation, everything())
 #
 # ggplot(dataset, aes(wage_st)) + geom_density(aes(fill = state), alpha = 0.3) +
@@ -79,6 +98,7 @@ dataset <- bind_rows(dataset1, dataset2) %>%
 #     labs(title = "Distribution of starting wage rates in fast food restaurants",
 #          caption = "On April 1st, 1992, New Jersey's minimum wage rose from $4.25 to $5.05. Source: Card and Krueger (1994)")
 
-eitc <- read_table2("http://www.montana.edu/cstoddard/562/oldkeys/eitc.out")
+usethis::use_data(njmin, overwrite = TRUE)
 
-usethis::use_data("DATASET")
+
+eitc <- read_table2("http://www.montana.edu/cstoddard/562/oldkeys/eitc.out")

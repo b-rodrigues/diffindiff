@@ -1,7 +1,0 @@
-# Prepare the Card and Krueger data
-#
-# Prepares the data that can be downloaded at <http://davidcard.berkeley.edu/data_sets.html>
-
-hello <- function() {
-  print("Hello, world!")
-}

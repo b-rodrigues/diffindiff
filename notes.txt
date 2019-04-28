@@ -65,3 +65,6 @@ Loading diffindiff
 remove hello.R, hello.Rd from man and commit 
 
 ok we can start working on the code itself
+
+> usethis::use_data(njmin, overwrite = TRUE)
+✔ Saving 'njmin' to 'data/njmin.rda'
